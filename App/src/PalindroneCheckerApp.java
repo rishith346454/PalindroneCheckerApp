@@ -1,4 +1,6 @@
-class PalindroneCheckerApp{
+import java.util.Stack;
+
+class PalindroneCheckerApp {
 
 
     /**
@@ -7,6 +9,25 @@ class PalindroneCheckerApp{
      */
     public static void main(String[] args) {
 
+UC5-Stack-BasedPalindromeChecker
+        String input = "noon";
+
+        Stack<Character> stack = new Stack<>();
+
+        for (char c : input.toCharArray()) {
+            stack.push(c);
+        }
+
+        boolean isPalindrome = true;
+
+        for (char c : input.toCharArray()) {
+            if (c != stack.pop()) {
+                isPalindrome = false;
+                break;
+            }
+        }
+
+=======
         // Declare and initialize the input string.
         String input = "radar";
 
@@ -33,6 +54,7 @@ class PalindroneCheckerApp{
         }
 
         // Display result
+ main
         System.out.println("Input : " + input);
         System.out.println("Is Palindrome? : " + isPalindrome);
     }
